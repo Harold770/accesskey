@@ -16,10 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from AccessKey.views import index, login
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
-    path('index/', index),
 ]
