@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include
+from django.urls import include,re_path
 from app.authentication import views
 
 urlpatterns = [
@@ -26,4 +26,5 @@ urlpatterns = [
     path('home/',include('app.logistic.urls')),
     #PATH OF USERS
     path('users/',include('app.users.urls')),
+    re_path('',include('pwa.urls'))
 ]

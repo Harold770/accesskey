@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pwa',
     
     # Local
     'app.users',
@@ -123,3 +124,20 @@ STATICFILES_DIRS = (os.path.abspath(os.path.join(BASE_DIR,'..', 'static')),)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+PWA_APP_NAME = 'ACCESKEY'
+PWA_APP_DESCRIPTION = 'Aplicacion de accesos'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+            'src': '/static/pwa/img/acceskey-icon.png',
+            'sizes': '160x160'
+    }
+]
+PWA_APP_SPLASH_SCREEN = [
+    {
+                    'src': '/static/pwa/img/acceskey-icon.png',
+                    'media': '(device-width: 320) and (device-heigh: 568px) and (-webkit-decive-pixel-ratio:2)'
+    }
+]
+PWA_APP_LANG = 'es'

@@ -1,4 +1,5 @@
 {% load static %}
+{% load pwa %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +15,8 @@
   <link rel="stylesheet" href='{% static "plugins/fontawesome-free/css/all.min.css" %}'>
   <!-- Theme style -->
   <link rel="stylesheet" href='{% static "dist/css/adminlte.css" %}'>
+
+  {% progressive_web_app_meta %}
   {% block head%} {% endblock%}
 </head>
 
